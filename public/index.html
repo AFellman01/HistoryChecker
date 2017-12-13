@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>History Checker</title>
@@ -15,35 +15,37 @@
                 <fb:login-button scope="public_profile,email,user_friends,user_likes" onlogin="work();" data-width="30" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true">
                 </fb:login-button>
               </div>
+              <div id="status"></div>
             </div>
           </div>
-          <div class='col-sm-6'>
-          </div>
+          <div class='col-sm-6'></div>
           <div class='col-sm-3'>
-          <a class="active" href="#home">Home</a>
-          <a href="#about">Profile</a>
-          <a href="#contact">Contacts</a>
+            <a class="active" href="#home">Home</a>
+            <a href="#about">Profile</a>
+            <a href="#contact">Contacts</a>
+          </div>
         </div>
       </div>
-    </div>
-    </div>
-      <div id="status"></div>
+    </div> 
     </div></br>
     <div class="pseudojumbo">
       <!-- <div class="jumbotron"> -->
-        <div id="intro">
+      <div id="intro">
         <h1>Welcome to History Checker</h1>
         <h3>Explaining the Lessons of Yesterday for the Students of Tomorrow<h3>
-  <h2>Facts are not Fake</h2>
-  </div>
-  <!-- </div> -->
+        <h2>Facts are not Fake</h2>
+      </div>
+    <!-- </div> -->
       <div id="frontSearch">
-        <input type="text" placeholder="Ask a question" id="qAsk"></br>
-        <button type="button" id="qSubmit">Submit</button>
-
+        <input type="text" placeholder="Ask a Question" id="qAsk"></br>
+        <button onclick="searchFunction()" id="qSubmit">Submit</button>
     </div>
   </body>
   <script>
+  function searchFunction (){
+      prompt("hallo")
+    };
+    
   function myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
   }
