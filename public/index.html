@@ -12,20 +12,21 @@
       <a href="#contact">Contacts</a>
       <!-- <input type="text" class = "barSearch" placeholder="Ask a Question"></br>
       <button type="button" class="submit" class="barButton">Submit</button> -->
+    
+    <div class="fbLogin">
+      <div>
+        <fb:login-button scope="public_profile,email,user_friends,user_likes" onlogin="work();" data-width="30" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true">
+        </fb:login-button>
+      </div>
+      <div id="status"></div>
     </div>
-
     <p>Welcome to History Checker, explaining the lessons of the past for the prosperity of the future.</p>
 
     <div id="frontSearch">
       <input type="text" placeholder="Ask a question" id="qAsk"></br>
       <button type="button" id="qSubmit">Submit</button>
     </div>
-    <div class="">
-      <div>
-        <fb:login-button scope="public_profile,email,user_friends,user_likes" onlogin="work();" data-width="30" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true">
-        </fb:login-button>
-      </div>
-      <div id="status"></div>
+    
     </div>
   </body>
   <script>
