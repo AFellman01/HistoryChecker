@@ -6,27 +6,41 @@
     <link rel="stylesheet" href="css/custom.css">
   </head>
   <body>
-    <div class="topnav">
-      <a class="active" href="#home">Home</a>
-      <a href="#about">Profile</a>
-      <a href="#contact">Contacts</a>
-      <!-- <input type="text" class = "barSearch" placeholder="Ask a Question"></br>
-      <button type="button" class="submit" class="barButton">Submit</button> -->
-    
-    <div class="fbLogin">
-      <div>
-        <fb:login-button scope="public_profile,email,user_friends,user_likes" onlogin="work();" data-width="30" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true">
-        </fb:login-button>
+    <div id="topnav" class="working">
+      <div class="container">
+        <div class="row">
+          <div class='col-sm-3'>
+            <div class="fbLogin">
+              <div>
+                <fb:login-button scope="public_profile,email,user_friends,user_likes" onlogin="work();" data-width="30" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true">
+                </fb:login-button>
+              </div>
+            </div>
+          </div>
+          <div class='col-sm-6'>
+          </div>
+          <div class='col-sm-3'>
+          <a class="active" href="#home">Home</a>
+          <a href="#about">Profile</a>
+          <a href="#contact">Contacts</a>
+        </div>
       </div>
+    </div>
+    </div>
       <div id="status"></div>
-    </div>
-    <p>Welcome to History Checker, explaining the lessons of the past for the prosperity of the future.</p>
+    </div></br>
+    <div class="pseudojumbo">
+      <!-- <div class="jumbotron"> -->
+        <div id="intro">
+        <h1>Welcome to History Checker</h1>
+        <h3>Explaining the Lessons of Yesterday for the Students of Tomorrow<h3>
+  <h2>Facts are not Fake</h2>
+  </div>
+  <!-- </div> -->
+      <div id="frontSearch">
+        <input type="text" placeholder="Ask a question" id="qAsk"></br>
+        <button type="button" id="qSubmit">Submit</button>
 
-    <div id="frontSearch">
-      <input type="text" placeholder="Ask a question" id="qAsk"></br>
-      <button type="button" id="qSubmit">Submit</button>
-    </div>
-    
     </div>
   </body>
   <script>
@@ -56,8 +70,8 @@
     window.fbAsyncInit = function() {
         FB.init({
             appId: '196629500887340',
-            cookie: true, 
-            xfbml: true, 
+            cookie: true,
+            xfbml: true,
             version: 'v2.8'
         });
         FB.getLoginStatus(function(response) {
@@ -76,14 +90,3 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
-  <footer>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Admin</button>
-      <div id="myDropdown" class="dropdown-content"></br>
-        <a><input type="text" placeholder="Admin User Name"></a></br>
-        <a><input type="text" placeholder="Admin Password"></a></br>
-        <button type="button" class="logIn">Log In</button>
-      </div>
-    </div>
-  </footer>
-</html>
