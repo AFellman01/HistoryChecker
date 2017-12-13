@@ -33,5 +33,8 @@ module.exports = function (sequelize, DataTypes) {
     }
 
   });
+  Admin.prototype.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.password)
+  }
       return Admin;
 }
