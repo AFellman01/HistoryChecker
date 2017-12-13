@@ -1,7 +1,7 @@
 var db = require("../models")
-module.export = function(app) {
+module.exports = function(app) {
 	app.post("/api/Admin", function(req, res){
-		console.log(req.)
+		console.log(req)
 		db.Admin.create(req.param.id, req.email, req.password, req.name, req.DateOfBirth)
 		.then(function(dbAdmin){
 			res.json(dbAdmin)

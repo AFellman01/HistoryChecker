@@ -22,14 +22,16 @@ module.exports = function (sequelize, DataTypes) {
     name: {
     	type: DataTypes.STRING,
     	allowNull:false,
-    	len: [1]  
+    	// len: [1]  
 
     },
 
     DateOfBirth: {
     	type: DataTypes.STRING,
     	allowNull: false
-    	len:[1]
+    	// len:[1]
     }
+
   });
+      return Admin;
 }
