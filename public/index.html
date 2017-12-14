@@ -10,6 +10,13 @@
       <div class="container">
         <div class="row">
           <div class='col-sm-3'>
+              <div id="header-left" class="clearfix">
+        <div id="logo" class="logo">
+          <a href="#">
+            <img src="public/images/histo.jpg" alt="logo" id="logo-img" class="logo-img" height="35" width="150">
+          </a>
+        </div>  <!-- logo  -->
+      </div> 
             <div class="fbLogin">
               <div>
                 <fb:login-button scope="public_profile,email,user_friends,user_likes" onlogin="work();" data-width="30" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true">
@@ -26,11 +33,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> 
     </div></br>
     <div class="pseudojumbo">
       <!-- <div class="jumbotron"> -->
-      <div id="intro">
+     <div id="intro">
         <h1>Welcome to History Checker</h1>
         <h3>Explaining the Lessons of Yesterday for the Students of Tomorrow<h3>
         <h2>Facts are not Fake</h2>
@@ -40,12 +47,13 @@
         <input type="text" placeholder="Ask a Question" id="qAsk"></br>
         <button onclick="searchFunction()" id="qSubmit">Submit</button>
     </div>
+
   </body>
   <script>
   function searchFunction (){
       prompt("hallo")
     };
-
+    
   function myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
   }
