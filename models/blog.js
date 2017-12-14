@@ -17,19 +17,19 @@ module.exports = function (sequelize, DataTypes) {
     },
     TrueOrFalse: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      allowNull: false,                           
       defaultValue: false,
     },
-    // created_at: {
-    // 	type: DataTypes.TIMESTAMP,
-    //   defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-    // 	allowNull: false
-    // },
-    // updated_at: {
-    //   type: DataTypes.TIMESTAMP,
-    //   defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-    //   allowNull: false,
-    // },
+    created_at: {
+    	type: 'TIMESTAMP',
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+    	allowNull: false
+    },
+    updated_at: {
+      type: 'TIMESTAMP',
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+      allowNull: false,
+    },
     Visible: {
       type:DataTypes.BOOLEAN,
       allowNull: false,
