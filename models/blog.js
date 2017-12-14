@@ -15,6 +15,11 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    TrueOrFalse: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    }
     created_at: {
     	type: TIMESTAMP,
       defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
@@ -26,9 +31,9 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: False,
     },
     Visible: {
-      type:BOOLEAN,
+      type:DataTypes.BOOLEAN,
       allowNull: false,
-      defaultValue:0,
+      defaultValue: false,
     }
 
       return POST;
