@@ -19,22 +19,23 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false,
-    }
-    created_at: {
-    	type: TIMESTAMP,
-      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
-    	allowNull: false
     },
-    updated_at {
-      type: TIMESTAMP,
-      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
-      allowNull: False,
-    },
+    // created_at: {
+    // 	type: DataTypes.TIMESTAMP,
+    //   defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+    // 	allowNull: false
+    // },
+    // updated_at: {
+    //   type: DataTypes.TIMESTAMP,
+    //   defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+    //   allowNull: false,
+    // },
     Visible: {
       type:DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false,
-    });
+    }
+	});
 
-      return POST;
+      return Blog;
 }
