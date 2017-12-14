@@ -7,7 +7,7 @@ module.exports = function(app) {
 			res.json(dbAdmin)
 		});
 	});
-
+//***********************DELETE ADMIN********************************
 	app.post("/api/Admin/:id",function(req, res){
 		db.Admin.destroy({
 			where: {
@@ -17,4 +17,30 @@ module.exports = function(app) {
 			res.json(dbAdmin);
 		})
 	})
+//***********************Find all post from User*********************
+	app.get ("/api/Admin", function(req, res){
+		var query = {};
+		if (req.query.id) {
+			query.id = req.query.id;
+		}
+		db.Blog.findAll({
+			where: query.
+			include: [db.Author]
+		}).then(function(dbPost){
+			res.json(dbPost)
+			console.log(dbPost)
+		})
+	});
+//***********************Delete Post from User*********************
+	app.delete ("api/Admin/:id", function(req, res){
+		db.Blog.destroy({
+			where: {
+				id: req.params.id
+			}
+		}).then(function(dbPost) {
+			res.json(dbPost)
+		})
+	})
+
+//********************************************
 }
