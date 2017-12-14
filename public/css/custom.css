@@ -96,11 +96,10 @@ button.edit {
   background-color: #E3DCCD;
   color: #033C5A;
 }
-.adminL{
+#adminL{
   border:0;
   outline: none;
-  background: none;
- background-color: blue;
+ 	background-color: #E3DCCD;
   box-shadow: none;
   border-radius: 0px;
   height:0px;
