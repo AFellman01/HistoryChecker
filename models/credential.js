@@ -1,15 +1,15 @@
 module.exports = function (sequelize, DataTypes) {
-	var Author = sequelize.define("Author", {
+	var Credential = sequelize.define("Credential", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
         },
 
-    Author: {
+    Credo: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
 }
-      return Author;
+      return Credential;
 }
