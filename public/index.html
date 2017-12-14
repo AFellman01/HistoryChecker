@@ -57,7 +57,7 @@
 
         <footer class="footer">
           <div class="container">
-            <span class="text-muted"><button id="adminL">Administrative Log-In</button></span>
+            <span class="text-muted"><button onclick="adminB()" id="adminL">Administrative Log-In</button></span>
           </div>
         </footer>
   </body>
@@ -65,6 +65,10 @@
   function searchFunction (){
       prompt("hallo")
     };
+    function adminB() {
+      prompt("Enter Username")
+      prompt("Enter Password")
+    }
 
   function myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
