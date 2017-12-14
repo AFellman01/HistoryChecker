@@ -6,9 +6,20 @@ body{
     /* overflow: hidden; */
     background-color:  #E3DCCD;
 }
+.fbLogin {
+	float: right;
+}
 
+#logo{
+	float: left;
+	padding: 0;
+}
+a{
+	color: #033C5A;
+}
 .pseudojumbo {
   background-color:white;
   text-align: center;
   margin-top: 200px;
 }
+
