@@ -1,5 +1,8 @@
 body{
   background-color: #033C5A;
+  /* color: #FFFFFF;
+  /*  */
+  color: #E3DCCD;
 }
 
 #topnav{
@@ -24,12 +27,14 @@ a{
 	width: 50%;
 }
 .pseudojumbo {
-  background-color:white;
+  /* background-color:white; */
   text-align: center;
+  text-shadow: #033C5A;
 }
 
 button.submit {
   float: right;
+  color: black;
 }
 
 form#cms {
@@ -74,4 +79,8 @@ button.edit {
 
 .top-30 {
   margin-top: 30px;
+}
+
+#frontSearch {
+  color:black;
 }
