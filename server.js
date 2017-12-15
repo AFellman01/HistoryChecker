@@ -1,30 +1,42 @@
 var express = require("express");
 var bodyParser = require("body-parser");
-var session = require("express-session");
-var passport = require("./config/passport");
-var exphbs = require("express-handlebars");
-
-var PORT = process.env.PORT || 8080;
-var db = require("./models");
 
 var app = express();
+var port = 8080;
+//var router = express.Router();
+// Sets up the Express app to handle data parsing
+
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static("public"));
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
-//*********************HANDLEBAR****************************
 
+var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+var mysql = require("mysql");
 
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-  });
+var connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "historyDB"
 });
+
+var routes = require("./controllers/historyControllers.js");
+
+app.use("/", routes);
+
+
+connection.connect(function(err) {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+
+  console.log("connected as id " + connection.threadId);
+});
+
+
+app.listen(port);

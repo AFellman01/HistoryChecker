@@ -12,37 +12,14 @@ router.get("/", function(req, res) {
 //       cats: data
 //     };
 //     console.log(hbsObject);
-//     res.render("index", hbsObject);
+    res.render("index");
 //   });
-// });
-
-router.post("/api/historychecker", function(req, res) {
-//   cat.create([
-//     "name", "sleepy"
-//   ], [
-//     req.body.name, req.body.sleepy
-//   ], function(result) {
-//     // Send back the ID of the new quote
-//     res.json({ id: result.insertId });
-//   });
-// });
-
-router.put("/api/historychecker/:id", function(req, res) {
-  // var condition = "id = " + req.params.id;
-
-  // console.log("condition", condition);
-
-history.update({
-  //   sleepy: req.body.sleepy
-  // }, condition, function(result) {
-  //   if (result.changedRows == 0) {
-  //     // If no rows were changed, then the ID must not exist, so 404
-  //     return res.status(404).end();
-  //   } else {
-  //     res.status(200).end();
-    }
-  });
 });
+
+router.get("/login", function(req, res){
+  res.render("partials/login")
+});
+
 
 // Export routes for server.js to use.
 module.exports = router;

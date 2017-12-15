@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS history;
-create database history;
+DROP DATABASE IF EXISTS historyDB;
+create database historyDB;
