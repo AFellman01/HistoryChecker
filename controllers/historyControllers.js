@@ -20,6 +20,10 @@ router.get("/login", function(req, res){
   res.render("partials/login")
 });
 
+router.get("/post", function(req, res){
+  res.render("partials/posts")
+});
+
 
 // Export routes for server.js to use.
 module.exports = router;
