@@ -82,5 +82,26 @@ button.edit {
 }
 
 #frontSearch {
-  color:black;
+  color:#033C5A;
+  /* background-color: silver; */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 45px;
+  line-height: 30px; /* Vertically center the text there */
+  background-color: #E3DCCD;
+  color: #033C5A;
+}
+#adminL{
+  border:0;
+  outline: none;
+ 	background-color: #E3DCCD;
+  box-shadow: none;
+  border-radius: 0px;
+  height:0px;
+  /* background: transparent !important; */
 }
