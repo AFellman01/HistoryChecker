@@ -6,7 +6,7 @@ module.exports = function (app){
 			res.json(dbPost);
 		});
 	});
-//*********************DETLET THE POST*******************************
+//*********************Create credential*******************************
 	app.post("api/blog", function (req,res){
 		db.Credential.create(req.Credo).then(function(dbPost){
 			res.json(dbPost);

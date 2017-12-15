@@ -42,5 +42,17 @@ module.exports = function(app) {
 		});
 	});
 
-//**********************
-}
+//**********************UPDATE Status of visible******************
+	app.put ("api/Admin/:id", function(req, res){
+		db.Blog.update(
+			req.Visible,
+			{
+				where: {
+					id: req.body.id,
+					defaultValue: true
+				}
+			}).then(function(dbUpdate){
+				res.json(dbUpdate);
+			})
+	});
+};
