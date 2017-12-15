@@ -36,7 +36,7 @@ router.get("/answers", function(req, res) {
 });
 
 router.get("/about", function(req, res) {
-  res.render("partials/post")
+  res.render("partials/about")
 })
 
 // Export routes for server.js to use.
