@@ -46,18 +46,19 @@
         <h1>Welcome to History Checker</h1>
         <h3>Explaining the Lessons of Yesterday for the Students of Tomorrow<h3>
         <h2>Facts are not Fake</h2>
-      </div>
-    <!-- </div> -->
-      <div id="frontSearch">
-        <input type="text" placeholder="Ask a Question" id="qAsk"></br>
-        <button onclick="searchFunction()" id="qSubmit">Submit</button>
-    </div>
+      </div>>
+
+    <form method="POST" action="search.html">
+    Search for your history:<br />
+    <input type="text" id="keyword" name="keyword" /><br />
+    <input type="submit" value="Search!" />
+    </form>
 
 
 
         <footer class="footer">
           <div class="container">
-            <span class="text-muted"><button onclick="adminB()" id="adminL">Administrative Log-In</button></span>
+            <span class="text-muted"><a href="./html/login.html" id="adminL">Administrative Log-In</a></span>
           </div>
         </footer>
   </body>
@@ -65,10 +66,10 @@
   function searchFunction (){
       prompt("hallo")
     };
-    function adminB() {
-      prompt("Enter Username")
-      prompt("Enter Password")
-    }
+    // function adminB() {
+    //   prompt("Enter Username")
+    //   prompt("Enter Password")
+    // }
 
   function myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");

@@ -5,7 +5,6 @@ module.exports = function (sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
         },
-
     Author: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -17,7 +16,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     TrueOrFalse: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,                           
+      allowNull: false,
       defaultValue: false,
     },
     created_at: {
@@ -39,3 +38,9 @@ module.exports = function (sequelize, DataTypes) {
 
       return Blog;
 }
+
+<form method="POST" action="search.php">
+Search the code repository:<br />
+<input type="text" id="keyword" name="keyword" /><br />
+<input type="submit" value="Search!" />
+</form>
