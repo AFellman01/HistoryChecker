@@ -15,14 +15,14 @@ router.get("/", function(req, res) {
     res.render("index");
 //   });
 });
-//
-// router.post("/search", function(req, res) {
-// 	    console.log(req.body);
-// 	    history.Blog.findAll().then(function(dbblog){
-// 	    	console.log(dbblog)
-// 	    	return res.render('index')
-// 	    })
-//  });
+
+router.post("/search", function(req, res) {
+	    console.log(req.body);
+	    history.Blog.findAll().then(function(dbblog){
+	    	console.log(dbblog)
+	    	return res.render('index')
+	    })
+ });
 router.get("/login", function(req, res){
   res.render("partials/login")
 });
@@ -32,8 +32,12 @@ router.get("/post", function(req, res){
 });
 
 router.get("/answers", function(req, res) {
-  res.render("/partials/answers")
+  res.render("partials/answers")
 });
+
+router.get("/about", function(req, res) {
+  res.render("partials/post")
+})
 
 // Export routes for server.js to use.
 module.exports = router;
