@@ -1,8 +1,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
-
+var db = require("./models");
 var app = express();
-var port = 8080;
+var PORT = 8080;
 //var router = express.Router();
 // Sets up the Express app to handle data parsing
 
@@ -20,7 +20,7 @@ var mysql = require("mysql");
 var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
+  password: "Flacos12",
   database: "historyDB"
 });
 
@@ -37,6 +37,9 @@ connection.connect(function(err) {
 
   console.log("connected as id " + connection.threadId);
 });
-
-
-app.listen(port);
+ 
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+  });
+});
