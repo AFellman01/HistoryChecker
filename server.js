@@ -20,7 +20,7 @@ var mysql = require("mysql");
 var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Flacos12",
+  password: "",
   database: "historyDB"
 });
 
@@ -37,7 +37,7 @@ connection.connect(function(err) {
 
   console.log("connected as id " + connection.threadId);
 });
- 
+
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);

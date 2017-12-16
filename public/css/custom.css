@@ -101,6 +101,17 @@ button.edit {
   background-color: #E3DCCD;
   color: #033C5A;
 }
+  a{
+  color: #033C5A;
+  font-weight: bold;
+  text-decoration: underline;
+  }
+  a:visited{
+    font-weight:bold;
+     color:white;
+     text-decoration: underline;
+  }
+}
 #adminL{
   border:0;
   outline: none;
