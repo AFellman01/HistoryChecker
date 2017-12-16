@@ -15,29 +15,47 @@ router.get("/", function(req, res) {
     res.render("index");
 //   });
 });
-
+//*********************Search All the Post**************************
 router.post("/search", function(req, res) {
 	    console.log(req.body);
+	    console.log("Search Woked");
 	    history.Blog.findAll().then(function(dbblog){
 	    	console.log(dbblog)
 	    	var truths = {answers: dbblog}
 	    	return res.render('facts-block', truths)
 	    })
  });
+//********************Login Page***********************************
 router.get("/login", function(req, res){
   res.render("partials/login")
 });
-
-router.get("/post", function(req, res){
-  res.render("partials/posts")
+//********************CREATE THE POST*******************************
+router.post("/post", function(req, res){
+	history.Blog.create({
+		Author: req.body.Author,
+		Post: req.body.Post
+	}).then(function(dbPost){console.log(dbPost)})
+ 	
+ 	history.Credential.create({
+ 		Credo: req.body.Credo
+ 	}).then(function(dbCredo){console.log(dbCredo)})
+ 	res.render("partials/posts")
 });
 
+//**********************Get the answer from Database****************
 router.get("/answers", function(req, res) {
   res.render("partials/answers")
 });
 
+//**********************Get Credential from Database****************
 router.get("/about", function(req, res) {
-  res.render("partials/about")
+	history.Credential.findOne({
+		where: {id: req.params.id, Author: req.params.Author}
+	}).then(function(dbCredential){
+		console.log(dbCredential);
+		res.render("partials/about")
+	})
+  	
 })
 
 // Export routes for server.js to use.
