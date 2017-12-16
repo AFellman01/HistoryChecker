@@ -20,7 +20,8 @@ router.post("/search", function(req, res) {
 	    console.log(req.body);
 	    history.Blog.findAll().then(function(dbblog){
 	    	console.log(dbblog)
-	    	return res.render('index')
+	    	var truths = {answers: dbblog}
+	    	return res.render('facts-block', truths)
 	    })
  });
 router.get("/login", function(req, res){
