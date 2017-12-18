@@ -20,6 +20,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       unique: true,
     },
+    TrueOrFalse: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false,
