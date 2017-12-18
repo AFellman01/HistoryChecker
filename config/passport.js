@@ -5,8 +5,8 @@ var LocalStrategy = require("passport-local").Strategy;
 var db = require("../models");
 
 passport.use(new FacebookStrategy({
-    clientID: FACEBOOK_APP_ID,
-    clientSecret: FACEBOOK_APP_SECRET,
+    clientID: 196629500887340,
+    clientSecret: "ab04b8c996c49ea8b13e0a8bee6a281a",
     callbackURL: "http://localhost:3000/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, cb) {

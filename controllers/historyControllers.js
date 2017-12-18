@@ -59,10 +59,33 @@ router.get("/about", function(req, res) {
 	})
 
 });
-// Initial get request for admin page
+
+//****************Search All post Admin Page*****************
 router.get("/admin", function(req, res) {
-  res.render("partials/admin")
+	history.Credential.findAll().then(function(AllPost){
+		var truths = {post: AllPost}
+		return res.render("all Post", truths)
+	})
+	res.render("partials/admin")
 })
+
+//*********************update Visible***********************
+
+router.put("/admin", function(req, res){
+	db.Blog.update(req.Visible, 
+	{
+		where: {
+			id: req.body.id,
+			defaultValue: true
+		}
+	}).then(function(dbUpdate){
+		return res.render("/admin")
+	})
+})
+
+router.get("/blog", function( req, res){
+  res.render("partials/blog");
+});
 
 // Export routes for server.js to use.
 module.exports = router;
