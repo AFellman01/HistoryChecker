@@ -1,18 +1,24 @@
-module.exports = function (sequelize, DataTypes) {
-	var Blog = sequelize.define("Blog", {
+module.exports = function(sequelize, DataTypes) {
+  var Blog = sequelize.define("Blog", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
-        },
+    },
     Author: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
+      unique: false
+    },
+    Title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
     },
     Post: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      unique: true,
     },
     TrueOrFalse: {
       type: DataTypes.BOOLEAN,
@@ -20,9 +26,9 @@ module.exports = function (sequelize, DataTypes) {
       defaultValue: false,
     },
     created_at: {
-    	type: 'TIMESTAMP',
+      type: 'TIMESTAMP',
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
-    	allowNull: false
+      allowNull: false
     },
     updated_at: {
       type: 'TIMESTAMP',
@@ -30,11 +36,11 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     },
     Visible: {
-      type:DataTypes.BOOLEAN,
+      type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false,
     }
-	});
+  });
 
-      return Blog;
+  return Blog;
 }
