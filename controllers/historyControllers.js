@@ -35,7 +35,9 @@ router.post("/post", function(req, res){
 		Author: req.body.Author,
 		Post: req.body.Post
 	}).then(function(dbPost){console.log(dbPost)})
- 	
+
+ 	//Create new Credo in table Credential
+
  	history.Credential.create({
  		Credo: req.body.Credo
  	}).then(function(dbCredo){console.log(dbCredo)})
@@ -50,7 +52,7 @@ router.get("/answers", function(req, res) {
 //**********************Get Credential from Database****************
 router.get("/about", function(req, res) {
 	history.Credential.findOne({
-		where: {id: req.params.id, Author: req.params.Author}
+		where: {id: req.params.id, Author: req.body.Author}
 	}).then(function(dbCredential){
 		console.log(dbCredential);
 		res.render("partials/about")
