@@ -1,14 +1,14 @@
 {
  "development": {
    "username": "root",
-   "password": "Tiger1932",
+   "password": "Flacos12",
    "database": "historyDB",
    "host": "127.0.0.1",
    "dialect": "mysql"
  },
  "test": {
    "username": "root",
-   "password": "Tiger1932",
+   "password": "Flacos12",
    "database": "database_test",
    "host": "127.0.0.1",
    "dialect": "mysql"

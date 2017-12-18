@@ -7,11 +7,26 @@
 
 
 <ul>
-   {{this.blog}}
+   {{this.Author}}
     {{answers.dataValues.Author}}
-    {{answers.dataValues.Title}}
-    {{answers.dataValues.Post}}
+  {{#each answers}}
+    {{this.Author}}
+    {{answers.dataValues.Author}}
+
+{{#unless false}}
+      {{> answers/answer-block true=true}}
+    {{/unless}} 
+  {{/each}}
 </ul>
+
+<h2>False!</h2>
+<ul>
+  {{#each answers}}
+    {{#if false}}
+      {{> answers/answer-block false=false}}
+    {{/if}}
+  {{/each}}
+</ul> 
 
 <div class="Container">
 <div class="row top-30">
