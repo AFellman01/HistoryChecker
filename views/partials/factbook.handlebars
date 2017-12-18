@@ -10,12 +10,12 @@
 <ul>
    {{this.Author}}
     {{answers.dataValues.Author}}
+    {{}}
   {{#each answers}}
     {{this.Author}}
     {{answers.dataValues.Author}}
 
 {{#unless false}}
-      {{> answers/answer-block true=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -24,7 +24,6 @@
 <ul>
   {{#each answers}}
     {{#if false}}
-      {{> answers/answer-block false=false}}
     {{/if}}
   {{/each}}
 </ul>
