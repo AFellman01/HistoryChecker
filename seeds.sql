@@ -9,7 +9,7 @@ INSERT INTO admins (email, password, name, DateOfBirth, createdAt) VALUES ("clar
 INSERT INTO admins (email, password, name, DateOfBirth, createdAt) VALUES ("heidycpp@gmail.com","Flacos12", "Heidy", "06/12/1978". "asdfd");
 
 
-INSERT INTO blog (Author, Title, Post, TrueOrFalse, Visible)
+INSERT INTO Blogs (Author, Title, Post, TrueOrFalse, Visible)
 VALUES("STAFF","Did George Washington Have Wooden Teeth?" "No", "False", "False");
 
 INSERT INTO blog (Author, Title, Post, TrueOrFalse, Visible)

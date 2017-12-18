@@ -18,11 +18,11 @@ router.get("/", function(req, res) {
 //*********************Search All the Post**************************
 router.post("/search", function(req, res) {
 	    console.log(req.body);
-	    console.log("Search Woked");
+	    console.log("Search Worked");
 	    history.Blog.findAll().then(function(dbblog){
 	    	console.log(dbblog)
 	    	var truths = {answers: dbblog}
-	    	return res.render('facts-block', truths)
+	    	return res.render('partials/factbook', truths)
 	    })
  });
 //********************Login Page***********************************
@@ -72,7 +72,7 @@ router.get("/admin", function(req, res) {
 //*********************update Visible***********************
 
 router.put("/admin", function(req, res){
-	db.Blog.update(req.Visible, 
+	db.Blog.update(req.Visible,
 	{
 		where: {
 			id: req.body.id,
