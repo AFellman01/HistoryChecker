@@ -22,7 +22,7 @@ router.post("/search", function(req, res) {
 	    history.blog.findAll({}).then(function(dbblog){
 	    	console.log(dbblog)
 	    	var truths = {answers: dbblog}
-	    	return res.render('partials/factbook', truths)
+	    	return res.render('partials/factbook')
 	    })
  });
 //********************Login Page***********************************
