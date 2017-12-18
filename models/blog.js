@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Blog = sequelize.define("Blog", {
+  var blog = sequelize.define("blog", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -20,7 +20,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       unique: true,
     },
-    TrueOrFalse: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false,
@@ -32,5 +31,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  return Blog;
+  return blog;
 }
