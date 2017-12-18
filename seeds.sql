@@ -6,6 +6,8 @@ INSERT INTO admins (email, password, name, DateOfBirth, createdAt) VALUES ("alex
 
 INSERT INTO admins (email, password, name, DateOfBirth, createdAt) VALUES ("clarkage94@gmail.com","Password123", "Sean", "05/12/1994". "asdfd");
 
+INSERT INTO admins (email, password, name, DateOfBirth, createdAt) VALUES ("heidycpp@gmail.com","Flacos12", "Heidy", "06/12/1978". "asdfd");
+
 
 INSERT INTO blog (Author, Title, Post, TrueOrFalse, Visible)
 VALUES("STAFF","Did George Washington Have Wooden Teeth?" "No", "False", "False");
