@@ -57,7 +57,11 @@ router.get("/about", function(req, res) {
 		console.log(dbCredential);
 		res.render("partials/about")
 	})
-  	
+
+});
+// Initial get request for admin page
+router.get("/admin", function(req, res) {
+  res.render("partials/admin")
 })
 
 // Export routes for server.js to use.
