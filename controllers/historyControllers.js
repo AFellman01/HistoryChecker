@@ -62,7 +62,7 @@ router.get("/about", function(req, res) {
 
 //****************Search All post Admin Page*****************
 router.get("/admin", function(req, res) {
-	history.Credential.findAll().then(function(AllPost){
+	history.Credential.findAll({}).then(function(AllPost){
 		var truths = {post: AllPost}
 		return res.render("all Post", truths)
 	})
