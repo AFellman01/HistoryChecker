@@ -2,10 +2,12 @@
 
 var fs        = require('fs');
 var path      = require('path');
-var Sequelize = require('sequelize');
 var basename  = path.basename(__filename);
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
+var Sequelize = require("sequelize");
+// sequelize (lowercase) references our connection to the DB.
+var sequelize = require("../config/connection.js");
 var db        = {};
 
 if (config.use_env_variable) {
