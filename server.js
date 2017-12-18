@@ -21,7 +21,7 @@ var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "Tiger1932",
-  database: "history"
+  database: "historyDB"
 });
 
 var routes = require("./controllers/historyControllers.js");
