@@ -7,26 +7,16 @@
 
 
 <ul>
-   {{this.Author}}
-    {{answers.dataValues.Author}}
-  {{#each answers}}
-    {{this.Author}}
-    {{answers.dataValues.Author}}
+  {{#each truths}}
+    <li>
+      <p><span class="label">ID:</span> {{this.id}}</p>
+      <p><span class="label">Quote:</span> {{this.Post}}</p>
+      <p><span class="label">Author:</span> {{this.Author}}</p>
 
-{{#unless false}}
-      {{> answers/answer-block true=true}}
-    {{/unless}} 
+      <a href="/{{this.id}}">Update this quote</a>
+    </li>
   {{/each}}
 </ul>
-
-<h2>False!</h2>
-<ul>
-  {{#each answers}}
-    {{#if false}}
-      {{> answers/answer-block false=false}}
-    {{/if}}
-  {{/each}}
-</ul> 
 
 <div class="Container">
 <div class="row top-30">

@@ -3,7 +3,7 @@ var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
 module.exports = function(sequelize, DataTypes) {
-  var blog = sequelize.define("blog", {
+  var blogs = sequelize.define("blogs", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -33,8 +33,21 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false,
+    },
+    
+   createdAt: {
+      type: Sequelize.DATE,
+      allownull: true,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+    },
+
+    updatedAt: {
+      type: Sequelize.DATE,
+      allownull: true,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     }
+
   });
 
-  return blog;
+  return blogs;
 }

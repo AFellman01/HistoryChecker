@@ -1,7 +1,6 @@
 var express = require("express");
 
 var router = express.Router();
-
 // Import the model (cat.js) to use its database functions.
 var history = require("../models/");
 
@@ -17,12 +16,11 @@ router.get("/", function(req, res) {
 });
 //*********************Search All the Post**************************
 router.post("/search", function(req, res) {
-	    console.log(req.body);
 	    console.log("Search Worked");
-	    history.blog.findAll({}).then(function(dbblog){
-	    	console.log(dbblog)
+	    history.blogs.findAll().then(function(dbblog){
 	    	var truths = {answers: dbblog}
-	    	return res.render('partials/factbook')
+	    	console.log(truths);
+	    	res.render('partials/factbook', truths)
 	    })
  });
 //********************Login Page***********************************
@@ -31,15 +29,18 @@ router.get("/login", function(req, res){
 });
 //********************CREATE THE POST*******************************
 router.post("/post", function(req, res){
-	history.Blog.create({
+	history.blog.create({
 		Author: req.body.Author,
 		Post: req.body.Post
-	}).then(function(dbPost){console.log(dbPost)})
+	}).then(function(dbPost){
+		console.log(dbPost)
+		res.render("partials/posts")
+	})
 
  	//Create new Credo in table Credential
 
  	history.Credential.create({
- 		Credo: req.body.Credo
+ 	Credo: req.body.Credo
  	}).then(function(dbCredo){console.log(dbCredo)})
  	res.render("partials/posts")
 });
@@ -62,7 +63,7 @@ router.get("/about", function(req, res) {
 
 //****************Search All post Admin Page*****************
 router.get("/admin", function(req, res) {
-	history.Credential.findAll({}).then(function(AllPost){
+	history.Credential.findAll().then(function(AllPost){
 		var truths = {post: AllPost}
 		return res.render("all Post", truths)
 	})

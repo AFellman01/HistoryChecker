@@ -29,11 +29,22 @@ module.exports = function (sequelize, DataTypes) {
     	// len: [1]
 
     },
-
     DateOfBirth: {
     	type: DataTypes.STRING,
-    	allowNull: false
+    	allowNull: true
     	// len:[1]
+    },
+
+    createdAt: {
+      type: Sequelize.DATE,
+      allownull: true,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+    },
+
+    updatedAt: {
+      type: Sequelize.DATE,
+      allownull: true,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     }
 
   });
