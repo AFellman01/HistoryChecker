@@ -55,16 +55,6 @@ router.get("/answers", function(req, res) {
   res.render("partials/answers")
 });
 
-//**********************Get Credential from Database****************
-router.get("/about", function(req, res) {
-	history.Credential.findOne({
-		where: {id: req.params.id, Author: req.body.Author}
-	}).then(function(dbCredential){
-		console.log(dbCredential);
-		res.render("partials/about")
-	})
-
-});
 
 //****************Search All post Admin Page*****************
 router.get("/admin", function(req, res) {
@@ -73,7 +63,11 @@ router.get("/admin", function(req, res) {
 		return res.render("all Post", truths)
 	})
 	res.render("partials/admin")
-})
+});
+
+
+
+
 
 //*********************update Visible***********************
 
@@ -91,6 +85,10 @@ router.put("/admin", function(req, res){
 
 router.get("/blog", function( req, res){
   res.render("partials/blog");
+});
+
+router.get("/about", function(req, res) {
+	res.render("partials/about")
 });
 
 // Export routes for server.js to use.
