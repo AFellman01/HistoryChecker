@@ -7,15 +7,20 @@
 
 
 <ul>
-  {{#each truths}}
+
     <li>
-      <p><span class="label">ID:</span> {{this.id}}</p>
-      <p><span class="label">Quote:</span> {{this.Post}}</p>
+      {{this.Post}}
+      {{answers.dataValues.Post}}
+
+      <h1> THIS IS : {{answers.dataValues.TrueOrFalse}} </h1>
+      <p><span class="label">ID:</span> {{answers.blogs.dataValues.id}}</p>
+      <p><span class="label">POST:</span> {{answers.blogs.dataValues.Post}}</p>
       <p><span class="label">Author:</span> {{this.Author}}</p>
+      <p><span class="label">Result:</span> {{this.TrueOrFalse}}</p>
 
       <a href="/{{this.id}}">Update this quote</a>
     </li>
-  {{/each}}
+
 </ul>
 
 <div class="Container">

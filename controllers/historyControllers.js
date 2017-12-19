@@ -16,8 +16,13 @@ router.get("/", function(req, res) {
 });
 //*********************Search All the Post**************************
 router.post("/search", function(req, res) {
+	console.log(req.body.keyword)
+	var question = req.body.keyword;
 	    console.log("Search Worked");
-	    history.blogs.findAll().then(function(dbblog){
+	    history.blogs.find({
+	    	where: { title:question },
+	    }).then(function(dbblog){
+	    	console.log(dbblog, 'right here @@@@')
 	    	var truths = {answers: dbblog}
 	    	console.log(truths);
 	    	res.render('partials/factbook', truths)
