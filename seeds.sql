@@ -1,22 +1,21 @@
 use historyDB;
 
 INSERT INTO blogs (Author, Title, Post, TrueOrFalse, Visible)
-VALUES("STAFF","Did George Washington Have Wooden Teeth?", "123awNo", 0,0 );
+VALUES("STAFF","Did George Washington Have Wooden Teeth?", "No, this is not true.", 0,0 );
 
 INSERT INTO blogs (Author, Title, Post, TrueOrFalse, Visible)
-VALUES("STAFF","Did George Pershing shoot Muslim rebels with pig?", "N123awo", 0,0 );
+VALUES("STAFF","Did George Pershing shoot Muslim rebels with pig?", "No, he did not.", 0,0 );
 
 INSERT INTO blogs (Author, Title, Post, TrueOrFalse, Visible)
-VALUES("STAFF","Was the Confederacy Founded on th123awe support and principle of slavery?", "123awYes", 1,0);
+VALUES("STAFF","Was the Confederacy Founded on the support and principle of slavery?", "Yes, it was.", 1,0);
 
 INSERT INTO blogs (Author, Title, Post, TrueOrFalse, Visible)
-VALUES("STAFF","Is Franklin Delano Roosevelt the only P123awresident to serve more than two terms?", "Y123awes", 1,0);
+VALUES("STAFF","Is Franklin Delano Roosevelt the only President to serve more than two terms?", "Yes, he is.", 1,0);
 
 INSERT INTO blogs (Author, Title, Post, TrueOrFalse, Visible)
-VALUES("STAFF","Did Thomas Jefferson have an affa123awir with his slave, Sally Hemmings?", "Yes123aw", 1,0);
+VALUES("STAFF","Did Thomas Jefferson have an affair with his slave, Sally Hemmings?", "Yes, he did.", 1,0);
 
 INSERT INTO blogs (Author, Title, Post, TrueOrFalse, Visible)
-VALUES("STAFF","Did Columbus discover the United Stat123awes of America?", "N123awo123aw", 0,0 );
+VALUES("STAFF","Did Columbus discover the United States of America?", "No. It was vikings. Also, Indians.", 0,0 );
 
 select * from blogs
-
